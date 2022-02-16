@@ -1,5 +1,5 @@
 
-import Product from '../components/Product';
+import Product from '../src/components/Product';
 import React from 'react';
 import { render,screen } from "@testing-library/react";
 

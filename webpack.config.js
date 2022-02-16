@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './main.tsx',
+  entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, '/bundle'),
     filename: 'index_bundle.js'
@@ -18,7 +18,7 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx|ts|tsx)$/,
-        exclude: [/node_modules|bower_components/, require.resolve('./index.html')],
+        exclude: [/node_modules|bower_components/, require.resolve('./public/index.html')],
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react']
@@ -40,7 +40,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html'
+      filename: 'index.html',
+      template: './public/index.html'
     })
   ],
 };
