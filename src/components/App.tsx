@@ -1,7 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
 import Product from './Product';
-import New from './Product';
 import './style.css';
 
 interface target {
